@@ -1,0 +1,14 @@
+# Nixpacks config — used by Neo App when a Dockerfile is not selected.
+# Builds the Next.js standalone output and runs it with Node.
+
+[phases.setup]
+nixPkgs = ["bun", "nodejs"]
+
+[phases.install]
+cmds = ["bun install --frozen-lockfile"]
+
+[phases.build]
+cmds = ["bun run build"]
+
+[start]
+cmd = "node .next/standalone/server.js"

@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+.gitignore
+dev.log
+server.log
+db
+prisma
+download
+examples
+tests
+*.md
+.env*
+.DS_Store
